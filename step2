@@ -1,0 +1,12 @@
+#This Script Run in PowerShell to Instal Azure Components and login into an Azure Account
+
+Install-Module -Name AzureRM -Scope CurrentUser
+Install-Module -Name Azure
+Install-Module -Name azureStack
+
+Install-Package -Name AzureRM.NetCore.Preview
+Import-Module AzureRM.NetCore.Preview
+
+Login-AzureRmAccount
+
+Get-AzureRmSubscription
