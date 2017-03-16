@@ -1,0 +1,18 @@
+#This Script Run in iOS Shell to Install PowerShell for MacOS
+
+#!/bin/bash
+
+#Instll components on the shell
+
+brew install wget -y -Scope CurrentUser
+brew install openssl -y -Scope CurrentUser
+brew install curel --with-openssl -y -Scope CurrentUser
+
+#Installs Azure CLI
+npm install -g azure-cli
+
+#Install Powershell on Mac
+sudo installer -pkg powershell-6.0.0-alpha.17.pkg -taget / -Scope CurrentUser
+
+#Login Powershell and configures PowerShell for Azure
+sudo -s powershell
